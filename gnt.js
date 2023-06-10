@@ -2,7 +2,7 @@ $(document).ready(function () {
     // typing animation
     (function ($) {
       $.fn.writeText = function (content) {
-        var contentArray = content.split(""),
+        let contentArray = content.split(""),
           current = 0,
           elem = this;
         setInterval(function () {
@@ -20,7 +20,7 @@ $(document).ready(function () {
     new WOW().init();
   
     // Push the body and the nav over by 285px over
-    var main = function () {
+    let main = function () {
       $(".fa-bars").click(function () {
         $(".nav-screen").animate(
           {
@@ -85,7 +85,7 @@ $(document).ready(function () {
       fitToSection: false,
   
       afterLoad: function (anchorLink, index) {
-        var loadedSection = $(this);
+        let loadedSection = $(this);
   
         //using index
         if (index == 1) {
@@ -147,7 +147,7 @@ $(document).ready(function () {
             this.pathname.replace(/^\//, "") &&
           location.hostname == this.hostname
         ) {
-          var target = $(this.hash);
+          let target = $(this.hash);
           target = target.length
             ? target
             : $("[name=" + this.hash.slice(1) + "]");
@@ -167,10 +167,10 @@ $(document).ready(function () {
     //ajax form
     $(function () {
       // Get the form.
-      var form = $("#ajax-contact");
+      let form = $("#ajax-contact");
   
       // Get the messages div.
-      var formMessages = $("#form-messages");
+      let formMessages = $("#form-messages");
   
       // Set up an event listener for the contact form.
       $(form).submit(function (e) {
@@ -178,7 +178,7 @@ $(document).ready(function () {
         e.preventDefault();
   
         // Serialize the form data.
-        var formData = $(form).serialize();
+        let formData = $(form).serialize();
   
         // Submit the form using AJAX.
         $.ajax({

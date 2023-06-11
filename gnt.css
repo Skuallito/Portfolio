@@ -50,7 +50,6 @@ p {
     right: -285px; /* start off behind the scenes */
     -webkit-font-smoothing: antialiased;
     position: fixed;
-    width: 285px;
   }
   
   .nav-screen .active {
@@ -105,7 +104,7 @@ p {
   }
   
   .header-links a {
-    color: #757575;
+    color: white;
     -webkit-transition: all 0.2s ease-in;
   }
   
@@ -157,26 +156,28 @@ p {
   
   /* Expanding border effect */
   
-  .header-links a::after {
+  /* .header-links a::after {
     display: block;
     margin: 0 auto;
     margin-top: 5px;
     width: 0;
     height: 2px;
-    background-color: #fff;
+    background-color: red;
     content: "";
     opacity: 0;
     -webkit-transition: width 0.6s, opacity 0.8s;
     -moz-transition: width 0.6s, opacity 0.8s;
     transition: width 0.6s, opacity 0.8s;
+    
   }
   
   .header-links a:hover::after,
   .header-links a:focus::after {
     opacity: 1;
     width: 100%;
-  }
+  } */
 
+  
 
 /* Border from Y to X  */
 /* div.nav
@@ -203,35 +204,38 @@ div.nav a
 
 
 /* Border from Y to X  */
-/* div.borderYtoX a:before, div.borderYtoX a:after
+div.header-links a:before, div.header-links a:after
 {
-  position: absolute;
+display: block;
   opacity: 0.5;
   height: 60%;
   width: 2px;
   content: '';
   background: darkcyan;
   transition: all 0.4s;
+  -webkit-transition: width 0.6s, opacity 0.8s;
+  -moz-transition: width 0.6s, opacity 0.8s;
+  transition: width 0.6s, opacity 0.8s;
 }
 
-div.borderYtoX a:before
+div.header-links a:before
 {
-  left: 0px;
+  left: 9px;
   top: 9px;
 }
 
-div.borderYtoX a:after
+div.header-links a:after
 {
-  right: 0px;
+  right: 9px;
   bottom: 9px;
 }
 
-div.borderYtoX a:hover:before, div.borderYtoX a:hover:after
+div.header-links a:hover:before, div.header-links a:hover:after
 {
   opacity: 1;
   height: 2px;
   width: 100%;
-} */
+}
 
 
 .aboutme{

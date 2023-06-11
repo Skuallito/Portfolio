@@ -19,6 +19,60 @@ $(document).ready(function () {
   // Initialisation de la bibliothèque WOW.js pour les animations
   new WOW().init();
 
+    // Push the body and the nav over by 285px over
+    var main = function () {
+      $(".fa-bars").click(function () {
+        $(".nav-screen").animate(
+          {
+            right: "0px"
+          },
+          200
+        );
+  
+        $("body").animate(
+          {
+            right: "285px"
+          },
+          200
+        );
+      });
+  
+      // Then push them back */
+      $(".fa-times").click(function () {
+        $(".nav-screen").animate(
+          {
+            right: "-285px"
+          },
+          200
+        );
+  
+        $("body").animate(
+          {
+            right: "0px"
+          },
+          200
+        );
+      });
+  
+      $(".nav-links a").click(function () {
+        $(".nav-screen").animate(
+          {
+            right: "-285px"
+          },
+          500
+        );
+  
+        $("body").animate(
+          {
+            right: "0px"
+          },
+          500
+        );
+      });
+    };
+  
+    $(document).ready(main);
+
   // Initialisation du plugin fullPage.js pour le défilement à une page complète
   $("#fullpage").fullpage({
     scrollBar: true,

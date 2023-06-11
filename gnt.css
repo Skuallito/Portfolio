@@ -542,6 +542,20 @@ label {
   .header-links {
     display: none;
   }
+
+  .fp-controlArrow.fp-next {
+    border-color: transparent transparent transparent transparent !important;
+  }
+
+  .fp-controlArrow.fp-prev {
+    border-color: transparent transparent transparent transparent !important;
+  }
+
+  .slide p {
+    margin-top: 10% !important;
+    font-size: 15px;
+  }
+  
 }
 
 @media (min-width: 100px) and (max-width: 400px) {
@@ -552,6 +566,8 @@ label {
   .aboutme h1 {
     font-size: 28px;
   }
+
+
 }
 
 /* ---------------------------------------------- */

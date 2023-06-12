@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-/* general styles */
+
+/* -------------------- Style Général -------------------- */
 body {
     font-family: "Raleway", sans-serif !important;
     background-color: #141417;
@@ -36,28 +37,9 @@ p {
 .skillbar {
   cursor: pointer;
 }
-  
 
-
-  /* Nav Screen */
   
-  .nav-screen {
-    height: 100%;
-    z-index: 500;
-    position: fixed;
-    background-color: #000;
-    opacity: 1;
-    right: -285px; /* start off behind the scenes */
-    -webkit-font-smoothing: antialiased;
-    position: fixed;
-  }
-  
-  .nav-screen .active {
-    display: block;
-  }
-  
-  /* nav header links */
-  
+ /* -------------------- Bar de Nav -------------------- */
   .nav-brand {
     position: fixed;
     left: 0;
@@ -111,15 +93,32 @@ p {
   .header-links a:hover {
     color: darkcyan !important;
   }
+
+
+  /* -------------------- Bar de Nav mobile -------------------- */
+  .nav-screen {
+    height: 100%;
+    z-index: 500;
+    position: fixed;
+    background-color: #000;
+    opacity: 1;
+    right: -285px;
+    -webkit-font-smoothing: antialiased;
+    position: fixed;
+  }
   
-  /* slide out nav menu styles */
+  .nav-screen .active {
+    display: block;
+  }
+
   
+/* -------------------- Bar de Nav mobile -------------------- */
   .nav-container {
     padding-top: 10%;
   }
   
   .nav-links {
-    width: 250px;
+    width: 120px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -137,6 +136,7 @@ p {
     line-height: 2.5;
     font-weight: bold;
     text-decoration: none;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
@@ -153,6 +153,7 @@ p {
   #fp-nav ul li .fp-tooltip {
     color: #5f5f5f !important;
   }
+
   
   /* Expanding border effect */
   
@@ -203,7 +204,7 @@ div.nav a
 } */
 
 
-/* Border from Y to X  */
+/* -------------------- Annimation Bar de Nav -------------------- */
 div.header-links a:before, div.header-links a:after
 {
 display: block;
@@ -238,22 +239,22 @@ div.header-links a:hover:before, div.header-links a:hover:after
 }
 
 
-.aboutme{
-  background:
-  linear-gradient(rgba(58,58,58,0.5),rgba(58,58,58,0.5)),
-  url("https://wallpapertag.com/wallpaper/full/e/2/0/815984-full-size-internet-wallpaper-2000x1200-windows-xp.jpg")
-  no-repeat;
-  background-size: cover;
+/* -------------------- Chevron Bounce -------------------- */
+
+.blinking-cursor {
+  font-weight: 500;
+  margin-left: 4px;
+  font-size: 20px;
+  color: white !important;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
 }
 
-.aboutme p {
-  color: white;
-  font-weight: bold;
-  font-size: 17.4px;
-}
 
-/* ---------------------------------------------- */
-
+/* -------------------- Chevron Bounce -------------------- */
 .fa-chevron-down {
   color: darkcyan !important;
   bottom: 10px;
@@ -263,8 +264,6 @@ div.header-links a:hover:before, div.header-links a:hover:after
   opacity: 0;
   -webkit-transition: 1.2s ease;
 }
-
-/* ---------------------------------------------- */
 
 @-webkit-keyframes bounce {
   0%,
@@ -325,8 +324,24 @@ div.header-links a:hover:before, div.header-links a:hover:after
   animation: bounce 2s infinite;
 }
 
-/* ---------------------------------------------- */
 
+/* -------------------- Skill Bar -------------------- */
+.aboutme{
+  background:
+  linear-gradient(rgba(58,58,58,0.5),rgba(58,58,58,0.5)),
+  url("https://wallpapertag.com/wallpaper/full/e/2/0/815984-full-size-internet-wallpaper-2000x1200-windows-xp.jpg")
+  no-repeat;
+  background-size: cover;
+}
+
+.aboutme p {
+  color: white;
+  font-weight: bold;
+  font-size: 17.4px;
+}
+
+
+/* -------------------- Skill Bar -------------------- */
 .container-skillbar {
   width: 100%;
   padding-top: 30px;
@@ -407,8 +422,8 @@ div.header-links a:hover:before, div.header-links a:hover:after
   color: darkcyan;
 }
 
-/* ---------------------------------------------- */
 
+/* -------------------- Portfolio -------------------- */
 .content {
   margin-left: auto;
   margin-right: auto;
@@ -445,8 +460,8 @@ div.header-links a:hover:before, div.header-links a:hover:after
   background: darkcyan !important;
 }
 
-/* ---------------------------------------------- */
 
+/* -------------------- Formulaire -------------------- */
 .contact-form {
   padding: 0px 15px 0px 15px;
 }
@@ -502,8 +517,8 @@ label {
   transition: all 0.3s ease-out;
 }
 
-/* ---------------------------------------------- */
 
+/* -------------------- Footer -------------------- */
 .footer {
   background-color: #484848;
   height: 100px;
@@ -516,8 +531,8 @@ label {
   font-size: 16px;
 }
 
-/* ---------------------------------------------- */
 
+/* -------------------- Liens Sociaux -------------------- */
 .social-links a {
   color: white;
   padding: 0px 5px 0px 5px;
@@ -532,8 +547,8 @@ label {
   transition: all 0.2s ease-in-out;
 }
 
-/* ---------------------------------------------- */
 
+/* -------------------- Version Mobile -------------------- */
 @media (min-width: 100px) and (max-width: 500px) {
   .fa-bars {
     display: block !important;
@@ -574,42 +589,4 @@ label {
     color: white;
   }
   
-}
-
-/* ---------------------------------------------- */
-
-.blinking-cursor {
-  font-weight: 500;
-  margin-left: 4px;
-  font-size: 20px;
-  color: white !important;
-  -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink step-end infinite;
-}
-
-/* ---------------------------------------------- */
-
-.success {
-  padding: 1em;
-  margin-bottom: 0.75rem;
-  color: lime;
-  background-color: #141417;
-  border: 1px solid darkcyan;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
-
-.error {
-  padding: 1em;
-  margin-bottom: 0.75rem;
-  color: red;
-  background-color: #141417;
-  border: 1px solid darkcyan;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
 }

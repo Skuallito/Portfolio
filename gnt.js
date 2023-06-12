@@ -23,16 +23,12 @@ $(document).ready(function () {
     let main = function () {
       $(".fa-bars").click(function () {
         $(".nav-screen").animate(
-          {
-            right: "0px"
-          },
+          {right: "0px"},
           200
         );
   
         $("body").animate(
-          {
-            right: "285px"
-          },
+          {right: "285px"},
           200
         );
       });
@@ -40,32 +36,24 @@ $(document).ready(function () {
       // Then push them back */
       $(".fa-times").click(function () {
         $(".nav-screen").animate(
-          {
-            right: "-285px"
-          },
+          {right: "-285px"},
           200
         );
   
         $("body").animate(
-          {
-            right: "0px"
-          },
+          {right: "0px"},
           200
         );
       });
   
       $(".nav-links a").click(function () {
         $(".nav-screen").animate(
-          {
-            right: "-285px"
-          },
+          {right: "-285px"},
           500
         );
   
         $("body").animate(
-          {
-            right: "0px"
-          },
+          {right: "0px"},
           500
         );
       });

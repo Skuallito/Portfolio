@@ -20,7 +20,7 @@ $(document).ready(function () {
   new WOW().init();
 
     // Push the body and the nav over by 285px over
-    var main = function () {
+    let main = function () {
       $(".fa-bars").click(function () {
         $(".nav-screen").animate(
           {

@@ -556,22 +556,24 @@ label {
     font-size: 15px;
   }
 
-  .slide h1 {
+  h1 {
     font-size: 20px;
   }
-  
-}
 
-@media (min-width: 100px) and (max-width: 400px) {
   .content {
     max-width: 300px;
   }
 
-  .aboutme h1 {
-    font-size: 28px;
+  .skill-bar-percent {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    font-size: 20px;
+    height: 10px;
+    line-height: 30px;
+    color: white;
   }
-
-
+  
 }
 
 /* ---------------------------------------------- */

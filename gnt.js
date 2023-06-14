@@ -66,7 +66,7 @@ $(document).ready(function () {
     scrollBar: true,
     responsiveWidth: 400,
     navigation: true,
-    navigationTooltips: ["home", "about", "portfolio", "contact", "connect"],
+    navigationTooltips: ["home", "skills", "portfolio", "about", "connect"],
     anchors: ["home", "about", "portfolio", "contact", "connect"],
 
     fitToSection: false,
@@ -122,7 +122,7 @@ $(document).ready(function () {
     let $el = $(sel);
     let $list = $el.children();
     let $item = $list.children().first();
-    let inherentMarginTop = parseInt($list.css("marginTop"), 10);
+    let inherentMarginTop = parseInt($list.css("marginTop"), 20);
     let offset = -inherentMarginTop + $item.height();
     function loop() {
       $list.animate(
@@ -141,5 +141,50 @@ $(document).ready(function () {
   }
   
   carrosuelText('.carrosuelContainer', 1000);
+
+
+  addEventListener('DOMContentLoaded',function(event){
+  
+    // array with texts to type in typewriter
+    let dataText=["Bootstrap", "Jquery", "Symfony", "Angular", "REACT"];
+    
+    // type one text in the typwriter
+    // keeps calling itself until the text is finished
+    function Writer(text, i, fnCallback) {
+      // chekc if text isn't finished yet
+      if (i < (text.length)) {
+        // add next character to h2
+       document.querySelector("h2").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+  
+        // wait for a while and call this function again for next character
+        setTimeout(function() {
+          Writer(text, i + 1, fnCallback)
+        }, 50);
+      }
+      // text finished, call callback if there is a callback function
+      else if (typeof fnCallback == 'function') {
+        // call callback after timeout
+        setTimeout(fnCallback, 2500);
+      }
+    }
+    // start a typewriter animation for a text in the dataText array
+     function StartTextAnimation(i) {
+       if (typeof dataText[i] == 'undefined'){
+          setTimeout(function() {
+            StartTextAnimation(0);
+          }, 500);
+       }
+       // check if dataText[i] exists
+      if (i < dataText[i].length) {
+        // text exists! start typewriter animation
+       Writer(dataText[i], 0, function(){
+         // after callback (and whole text has been animated), start next text
+         StartTextAnimation(i + 1);
+       });
+      }
+    }
+    // start the text animation
+    StartTextAnimation(0);
+  });
 
 });

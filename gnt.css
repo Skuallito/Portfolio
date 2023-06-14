@@ -682,8 +682,7 @@ label {
   width: 400px;
   height: 40px;
   margin: 0 auto;
-  p
-
+  }
 
 
 /* Très petite 576 px
@@ -692,6 +691,4 @@ Smartphone ≥ 768 px
 Tablette ≥ 992 px
 Grande tablette et PC 13’’ ≥ 1 200 px
 Très très grande ≥ 1400 px */
-}
-  
 }

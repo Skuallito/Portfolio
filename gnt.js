@@ -150,7 +150,7 @@ $(document).ready(function () {
     
     // type one text in the typwriter
     // keeps calling itself until the text is finished
-    function Writer(text, i, fnCallback) {
+    function dataWriter(text, i, fnCallback) {
       // chekc if text isn't finished yet
       if (i < (text.length)) {
         // add next character to h2
@@ -158,7 +158,7 @@ $(document).ready(function () {
   
         // wait for a while and call this function again for next character
         setTimeout(function() {
-          Writer(text, i + 1, fnCallback)
+          dataWriter(text, i + 1, fnCallback)
         }, 50);
       }
       // text finished, call callback if there is a callback function
@@ -177,7 +177,7 @@ $(document).ready(function () {
        // check if dataText[i] exists
       if (i < dataText[i].length) {
         // text exists! start typewriter animation
-       Writer(dataText[i], 0, function(){
+       dataWriter(dataText[i], 0, function(){
          // after callback (and whole text has been animated), start next text
          StartTextAnimation(i + 1);
        });

@@ -116,4 +116,30 @@ $(document).ready(function () {
     $.fn.fullpage.moveTo(4);
   });
 
+
+  // Carrousel Text
+  function carrosuelText(sel, time) {
+    let $el = $(sel);
+    let $list = $el.children();
+    let $item = $list.children().first();
+    let inherentMarginTop = parseInt($list.css("marginTop"), 1);
+    let offset = -inherentMarginTop + $item.height();
+    function loop() {
+      $list.animate(
+        {
+          marginTop: -offset
+        },
+        function() {
+          $list.css({ marginTop: inherentMarginTop + 'px' });
+          $list.children().first().appendTo($list);
+          setTimeout(loop, time);
+        }
+      );
+    }
+    
+    loop();
+  }
+  
+  carrosuelText('.carrosuelContainer', 1000);
+
 });

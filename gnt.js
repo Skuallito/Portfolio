@@ -122,7 +122,7 @@ $(document).ready(function () {
     let $el = $(sel);
     let $list = $el.children();
     let $item = $list.children().first();
-    let inherentMarginTop = parseInt($list.css("marginTop"), 1);
+    let inherentMarginTop = parseInt($list.css("marginTop"), 10);
     let offset = -inherentMarginTop + $item.height();
     function loop() {
       $list.animate(
